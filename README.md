@@ -10,6 +10,7 @@ __NOTE:__ _**Input must be enclosed with quotes " " except the maximum file size
 * Input the values in quotes " " as shown in the image above, except for the maximum file size input
 * The output files will be generated without exceeding the file limit
 
+![OUTPUTFOMAT](https://github.com/sathvikrijo/mergeJSON/blob/master/demo.png)
 
 #### Time Complexity
 * Conisder the number of input files as N and number of lines in each file as M
