@@ -26,9 +26,12 @@ class MergeJSON(object):
 
     def template(self):
         self.outputFile = self.outputFile_Prefix + str(self.counter) + ".json"
-        with open(self.inputFiles[0]) as f:
-            self.first_line = f.readline()
-            self.end_line = "] }"
+        if(len(self.inputFiles) != 0):
+            with open(self.inputFiles[0]) as f:
+                self.first_line = f.readline()
+                self.end_line = "] }"
+        else:
+            print("Input files not found")
 
     def openFile(self):
         self.out = open(self.outputFile,"w")
