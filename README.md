@@ -16,11 +16,11 @@ __NOTE:__ _**Input must be enclosed with quotes " " except the maximum file size
 * The output files will be generated without exceeding the file limit
 
 #### Time Complexity
-* Conisder the number of input files as N and number of lines in each file as M
+* Conisder the __number of input files as N__ and __number of lines in each file as M__
 * Time complexity of the program is: O(N*M)
 
 #### Space complexity
-* Consider the number of characters in each line as N
+* Consider the __number of characters in each line as N__
 * Space complexity of the program is: O(N)
 
 -Submited by: Sathvik S
