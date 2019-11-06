@@ -3,7 +3,7 @@
 # Input Format
 __NOTE:__ _**Input must be enclosed with quotes " " except the maximum file size input**_
 
-![INPUT FORMAT](https://drive.google.com/open?id=1G3OoGqQZUTr9lCDslhLHFA8fn0U0uTn5)
+![INPUTFOMRAT](https://github.com/sathvikrijo/mergeJSON/blob/master/input%20format.png)
 
 #### To run
 * Run the run.py file by running the command python run.py in the terminal
