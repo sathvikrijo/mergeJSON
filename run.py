@@ -62,7 +62,7 @@ class MergeJSON(object):
                     elif self.data == self.end_line or self.input_line_no == 1:
                         pass
                     else:
-                        self.out.write(str("\t"+ self.data))
+                        self.out.write(str(self.data))
                         self.out.flush()
                     if self.getFileSize() > self.maxFile_Size:
                         self.rotateFile()
