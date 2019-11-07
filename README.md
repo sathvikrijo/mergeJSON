@@ -3,7 +3,7 @@
 # Input Format
 __NOTE:__ _**Input must be enclosed with quotes " " except the maximum file size input**_
 
-![INPUTFOMRAT](https://github.com/sathvikrijo/mergeJSON/blob/master/input%20format.png)
+![INPUTFOMRAT](https://github.com/sathvikrijo/mergeJSON/blob/master/input%20fomat.png)
 
 
 ![OUTPUTFOMAT](https://github.com/sathvikrijo/mergeJSON/blob/master/demo.png)
