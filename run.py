@@ -79,7 +79,7 @@ if __name__ == '__main__':
     path = str(input("Path: "))
     inPrefix = input("Input file prefix: ")
     outPrefix = input("Output file prefix: ")
-    maxSize = input("Max File Size allowed (in KB): ")
+    maxSize = input("Max File Size allowed (in Bytes): ")
 
     mergeJson = MergeJSON(path, inPrefix, outPrefix, maxSize)
     print("Output files generated successfully")
