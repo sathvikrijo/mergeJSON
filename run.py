@@ -1,5 +1,6 @@
 import json
 import os
+import re
 
 class MergeJSON(object):
     def __init__(self, path, inPrefix, outPrefix, maxSize):
@@ -50,24 +51,31 @@ class MergeJSON(object):
 
 
     def parse(self):
+        self.formatt = re.compile("\{(.*)\}")
+        self.endformat = re.compile("\](.*)}(.*)")
         for self.inputFile in self.inputFiles:
             self.input_line_no = 1
             with open(self.inputFile) as self.ins:
-                self.data = self.ins.readline()
+                self.data = " "
                 while self.data:
-                    self.data = self.data.replace("}\n","},\n")
+                    self.data = self.ins.readline()
+                    self.temp = self.formatt.findall(self.data)
+                    self.isEnd = self.endformat.findall(self.data)
+                    if len(self.temp) != 0:
+                        self.data = "\t{" + self.temp[0] + "},\n"
+                    elif len(self.isEnd) != 0:
+                        continue
                     if self.output_line_no == 1:
-                        self.out.write(self.first_line)
+                        self.out.write(self.first_line)                        
                         self.output_line_no += 1
-                    elif self.data == self.end_line or self.input_line_no == 1:
+                    elif self.input_line_no == 1:
                         pass
                     else:
-                        self.out.write(str(self.data))
+                        self.out.write(self.data)
                         self.out.flush()
                     if self.getFileSize() > self.maxFile_Size:
                         self.rotateFile()
                         continue
-                    self.data = self.ins.readline()
                     self.input_line_no += 1
             if self.inputFiles.index(self.inputFile) == (len(self.inputFiles)-1):
                 self.out.seek(-2, os.SEEK_END)
